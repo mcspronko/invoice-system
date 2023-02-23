@@ -1,0 +1,11 @@
+{
+    "name": "maxpronko/invoice-system",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Invoice\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}
