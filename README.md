@@ -9,3 +9,4 @@ The `start` and `end` indicate source code start and end of an episode. If you w
 # Series
 1. [Invoice Management System with PHP 8](https://www.youtube.com/watch?v=zoIgpOIRJWo)
 2. [Project Requirements and Setup](https://youtu.be/uSmU2KgSXC0)
+3. [Simple PHP Routing for Invoice Management System](https://youtu.be/70UJa2x7Pkk)
