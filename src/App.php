@@ -6,6 +6,13 @@ class App
 {
     public function run(): void
     {
-        echo 'Invoice Management System';
+        $router = new Router();
+
+        $request = new Request();
+        $handler = $router->dispatch($request);
+
+        if ($handler) {
+            $handler();
+        }
     }
 }
