@@ -2,7 +2,7 @@
 
 namespace Invoice;
 
-class Request
+class Request implements RequestInterface
 {
     private array $server;
 
@@ -25,5 +25,10 @@ class Request
     {
         $uri = $this->getUri();
         return $uri['path'];
+    }
+
+    public function getMethod(): string
+    {
+        return $this->getServer('REQUEST_METHOD');
     }
 }
