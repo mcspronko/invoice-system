@@ -2,10 +2,14 @@
 
 namespace Invoice\Controller;
 
+use Invoice\RequestInterface;
+use Invoice\ResponseInterface;
+
 class SettingsController implements ActionInterface
 {
-    public function __invoke()
+    public function __invoke(RequestInterface $request, ResponseInterface $response): ResponseInterface
     {
-        echo 'Settings Page';
+        $response->template('page/settings');
+        return $response;
     }
 }
