@@ -8,11 +8,12 @@ class App
     {
         $router = new Router();
 
+        $routesList = new RoutesList();
+        $routesList->configure($router);
+
         $request = new Request();
         $handler = $router->dispatch($request);
 
-        if ($handler) {
-            $handler();
-        }
+        $handler();
     }
 }
