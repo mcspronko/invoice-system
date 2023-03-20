@@ -11,3 +11,4 @@ The `start` and `end` indicate source code start and end of an episode. If you w
 2. [Project Requirements and Setup](https://youtu.be/uSmU2KgSXC0)
 3. [Simple PHP Routing for Invoice Management System](https://youtu.be/70UJa2x7Pkk)
 4. [PHP Action Controller for HTTP GET Requests](https://www.youtube.com/watch?v=TCqL_OR-cgQ)
+5. [Templating for Invoice Management System with PHP](https://youtu.be/DFPLTYq8boI)
