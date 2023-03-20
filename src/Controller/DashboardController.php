@@ -2,10 +2,14 @@
 
 namespace Invoice\Controller;
 
+use Invoice\RequestInterface;
+use Invoice\ResponseInterface;
+
 class DashboardController implements ActionInterface
 {
-    public function __invoke()
+    public function __invoke(RequestInterface $request, ResponseInterface $response): ResponseInterface
     {
-        echo 'Dashboard Page';
+        $response->template('page/dashboard');
+        return $response;
     }
 }

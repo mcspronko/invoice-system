@@ -2,10 +2,14 @@
 
 namespace Invoice\Controller;
 
+use Invoice\RequestInterface;
+use Invoice\ResponseInterface;
+
 class InvoicesController implements ActionInterface
 {
-    public function __invoke()
+    public function __invoke(RequestInterface $request, ResponseInterface $response): ResponseInterface
     {
-        echo 'Invoices List Page';
+        $response->template('page/invoices');
+        return $response;
     }
 }

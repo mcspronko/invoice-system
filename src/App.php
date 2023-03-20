@@ -14,6 +14,11 @@ class App
         $request = new Request();
         $handler = $router->dispatch($request);
 
-        $handler();
+        $response = new Response(
+            dirname(__DIR__) . '/templates'
+        );
+
+        $response = $handler($request, $response);
+        $response->render();
     }
 }
