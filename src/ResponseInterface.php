@@ -4,6 +4,6 @@ namespace Invoice;
 
 interface ResponseInterface
 {
-    public function template(string $name): void;
+    public function template(string $name, array $vars = []): void;
     public function render(): void;
 }
