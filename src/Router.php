@@ -8,6 +8,7 @@ use Invoice\Controller\ActionInterface;
 class Router implements RouterInterface
 {
     private const HTTP_GET = 'GET';
+    private string $pageNotFound;
 
     public function __construct(private array $routes = []) {}
 
@@ -16,12 +17,17 @@ class Router implements RouterInterface
         $this->routes[self::HTTP_GET][$path] = $callback;
     }
 
+    public function pageNotFound(string $callback): void
+    {
+        $this->pageNotFound = $callback;
+    }
+
     public function dispatch(RequestInterface $request): ActionInterface
     {
         $path = $request->getPath();
         $method = $request->getMethod();
 
-        $callback = $this->routes[$method][$path] ?? null;
+        $callback = $this->routes[$method][$path] ?? $this->pageNotFound;
 
         if (!$callback) {
             throw new Exception('Not found', 404);
