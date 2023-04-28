@@ -2,6 +2,7 @@
 
 namespace Invoice\Controller;
 
+use Invoice\Entity\InvoiceRepository;
 use Invoice\RequestInterface;
 use Invoice\ResponseInterface;
 
@@ -9,7 +10,14 @@ class InvoicesController implements ActionInterface
 {
     public function __invoke(RequestInterface $request, ResponseInterface $response): ResponseInterface
     {
-        $response->template('page/invoices');
+        $invoices = (new InvoiceRepository())->load();
+        $response->template(
+            'page/invoices',
+            [
+                'title' => 'Invoices',
+                'invoices' => $invoices
+            ]
+        );
         return $response;
     }
 }
