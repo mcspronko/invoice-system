@@ -12,3 +12,8 @@ The `start` and `end` indicate source code start and end of an episode. If you w
 3. [Simple PHP Routing for Invoice Management System](https://youtu.be/70UJa2x7Pkk)
 4. [PHP Action Controller for HTTP GET Requests](https://www.youtube.com/watch?v=TCqL_OR-cgQ)
 5. [Templating for Invoice Management System with PHP](https://youtu.be/DFPLTYq8boI)
+6. [Implementing Page Not Found PHP handler](https://www.youtube.com/watch?v=EIeQhNavy0k)
+7. [Router with Dynamic Params in PHP 8](https://www.youtube.com/watch?v=JYeU4LrWUjY)
+8. [Docker Introduction for PHP Developers](https://www.youtube.com/watch?v=ox6JlF1kyzk)
+9. [MySQL Database Connection via PHP PDO](https://www.youtube.com/watch?v=z9UiCfN8Tdk)
+
